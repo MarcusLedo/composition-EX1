@@ -14,12 +14,11 @@ public class Worker {
 		
 	}
 
-	public Worker(String name, WorkerLevel level, Double baseSalary, Department department, Contract contract) {
+	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
-		this.department = department;
-		addContract(contract);
+		this.department = department;;
 	}
 
 	public String getName() {
