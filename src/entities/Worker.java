@@ -60,4 +60,13 @@ public class Worker {
 	public void addContract(Contract contract) {
 		this.contract.add(contract);
 	}
+	
+	public double income(int year, int month) {
+		double income = baseSalary;
+		for(Contract x : contract) 
+			if(x.getDate().getYear() == year && x.getDate().getMonthValue() == month) 
+				income += x.totalValue();
+			
+		return income;
+	}
 }
